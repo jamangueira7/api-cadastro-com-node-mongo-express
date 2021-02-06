@@ -6,6 +6,7 @@
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-rodar">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-rotas">Rotas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;
   </p>
 <p align="center">
@@ -16,45 +17,61 @@
 <br>
 
 <p align="center">
-  <img alt="Sistema" src=".github/sis.PNG" width="100%">
+  <img alt="Sistema" src=".github/imagem1.PNG" width="100%">
 </p>
 
-###### Na tela é possivel adicionar uma nova ULR com eses formato "teste, http://www.teste.com".
-###### Para excluir basta clicar no X ao lado do nome.
-
-## Curso Rocketseat - MasterClass #11
+## API rest para cadastro de usuario
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Node.js](https://nodejs.org/en/) - v14.4.0
+- [Mongo](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/) - 19.03.8
 - [Yarn](https://yarnpkg.com/) - 1.22.4
 - [Npm](https://www.npmjs.com/) - 6.14.5
 
 
 ## 💻 Projeto
 
-Esse projeto foi feito acompanhando a video aula do Youtube, [clique aqui](https://www.youtube.com/watch?v=DiXbJL3iWVs&t=1812s) para acessar.
+Projeto para cadastro de usuario usando NodeJS, Express, MongoDB e Docker.
+
+Esse projeto foi feito acompanhando a video aula do Youtube, [clique aqui](https://www.youtube.com/watch?v=BN_8bCfVp88) para acessar.
 
 ## 🚀 Como Rodar
 
 - Clone o projeto.
-- Roder o comando "npm install" para instalar as dependências.
-- Roder o comando "npm run api" para inicar a API.
-- Roder o comando "npm start" para iniciar a parte visual.
+- Rode o comando "yarn install" para instalar as dependências.
+- Rode o comando "docker run --name mongodb -p 27017:27017 -d -t mongo"
+- docker ps para ver se o Mongo está rodando no Docker.
+- Caso não esteja docker start mongo para rodar.
+- Rode o comando "node src/index.js" para iniciar a API.
 - Para testar a API acesse localhost:3000.
-- Para testar o Layout acesse localhost:5000.
 
+## 👩🏿‍💻 Rotas
 
-#### API
+- **`POST auth/register`**: Rota crair um usuario;
+Envio
+```
+{
+    "name": "João",
+    "email": "joao3@joao.com",
+    "password": "123456"
+}
 
-###### Retornar todos os dados.
-http://localhost:3000
-###### Adicionar.
-http://localhost:3000?name=teste&url=https://teste1.com.br
-###### Escluir.
-http://localhost:3000?name=teste&url=https://teste1.com.br&del=1
+```
+Retorno
+```
+{
+    "user": {
+        "_id": "601e9eb52ed5e925a01e1c05",
+        "name": "João",
+        "email": "joao3@joao.com",
+        "createdAt": "2021-02-06T13:50:45.656Z",
+        "__v": 0
+    }
+}
 
 ## 🤔 Como contribuir
 
