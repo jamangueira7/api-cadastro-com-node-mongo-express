@@ -7,6 +7,12 @@ const User = require('../models/User');
 
 const router = express.Router();
 
+function generateToken(params = {}) {
+    return jwt.sign({ id: params }, authConfig.secret, {
+        expiresIn: 86400,
+    });
+}
+
 router.post('/register', async (req, res) => {
     const { email } = req.body;
 
@@ -19,7 +25,10 @@ router.post('/register', async (req, res) => {
 
         user.password = undefined;
 
-        return res.send({ user });
+        return res.send({
+            user,
+            token: generateToken({ id: user.id }),
+        });
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed', msg: err.message });
     }
@@ -41,11 +50,11 @@ router.post('/authenticate', async (req, res) => {
     user.password = undefined;
 
     try {
-        const token = jwt.sign({ id: user.id }, authConfig.secret, {
-            expiresIn: 86400,
-        });
 
-        res.send({ user, token });
+        res.send({
+            user,
+            token: generateToken({ id: user.id }),
+        });
 
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed', msg: err.message });
