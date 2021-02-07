@@ -1,4 +1,6 @@
 const express = require('express');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');
 
@@ -15,7 +17,7 @@ router.post('/register', async (req, res) => {
         const user = await User.create(req.body);
 
         user.password = undefined;
-
+        
         return res.send({ user });
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed', msg: err.message });
@@ -31,7 +33,15 @@ router.post('/authenticate', async (req, res) => {
         return res.status(400).send({ error: 'User not found' });
     }
 
+    if(!await bcrypt.compare(password, user.password)) {
+        return res.status(400).send({ error: 'Invalid password' });
+    }
+
+    user.password = undefined;
+
     try {
+
+        res.send({ user });
 
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed', msg: err.message });

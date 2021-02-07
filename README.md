@@ -74,6 +74,28 @@ Retorno
 }
 ```
 
+- **`POST auth/authenticate`**: Rota para autenticar o usuario;
+Envio
+```
+{
+    "email": "joao3@joao.com",
+    "password": "123456"
+}
+
+```
+Retorno
+```
+{
+    "user": {
+        "_id": "601e9eb52ed5e925a01e1c05",
+        "name": "João",
+        "email": "joao3@joao.com",
+        "createdAt": "2021-02-06T13:50:45.656Z",
+        "__v": 0
+    }
+}
+```
+
 ## 🤔 Como contribuir
 
 - Faça um fork desse repositório;
