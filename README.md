@@ -100,6 +100,15 @@ Retorno
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjYwMjA2ODRkZTA0NThhMGM2YzJjZWFmNiJ9LCJpYXQiOjE2MTI3MzY1ODksImV4cCI6MTYxMjgyMjk4OX0.vbU6uG_RalGcVEfeEtErqedD8-BjBnKr_DHdy3H-liQ"
 }
 ```
+- **`POST auth/projects`**: Rota para usuarios autenticados verem os projetos;
+
+```
+Retorno
+```
+{
+
+}
+```
 
 ## 🤔 Como contribuir
 
