@@ -37,7 +37,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Projeto para cadastro de usuario usando NodeJS, Express, MongoDB e Docker.
 
-Esse projeto foi feito acompanhando a video aula do Youtube, [clique aqui](https://www.youtube.com/watch?v=BN_8bCfVp88) para acessar.
+Esse projeto foi feito acompanhando a video aula do Youtube:
+ 
+- Aula 1[clique aqui](https://www.youtube.com/watch?v=BN_8bCfVp88).
+- Aula 2[clique aqui](https://www.youtube.com/watch?v=KKTX1l3sZGk).
 
 ## 🚀 Como Rodar
 
@@ -65,12 +68,13 @@ Retorno
 ```
 {
     "user": {
-        "_id": "601e9eb52ed5e925a01e1c05",
+        "_id": "6020684de0458a0c6c2ceaf6",
         "name": "João",
-        "email": "joao3@joao.com",
-        "createdAt": "2021-02-06T13:50:45.656Z",
+        "email": "joao4@joao.com",
+        "createdAt": "2021-02-07T22:23:09.011Z",
         "__v": 0
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjYwMjA2ODRkZTA0NThhMGM2YzJjZWFmNiJ9LCJpYXQiOjE2MTI3MzY1ODksImV4cCI6MTYxMjgyMjk4OX0.vbU6uG_RalGcVEfeEtErqedD8-BjBnKr_DHdy3H-liQ"
 }
 ```
 
@@ -87,12 +91,13 @@ Retorno
 ```
 {
     "user": {
-        "_id": "601e9eb52ed5e925a01e1c05",
+        "_id": "6020684de0458a0c6c2ceaf6",
         "name": "João",
-        "email": "joao3@joao.com",
-        "createdAt": "2021-02-06T13:50:45.656Z",
+        "email": "joao4@joao.com",
+        "createdAt": "2021-02-07T22:23:09.011Z",
         "__v": 0
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjYwMjA2ODRkZTA0NThhMGM2YzJjZWFmNiJ9LCJpYXQiOjE2MTI3MzY1ODksImV4cCI6MTYxMjgyMjk4OX0.vbU6uG_RalGcVEfeEtErqedD8-BjBnKr_DHdy3H-liQ"
 }
 ```
 
