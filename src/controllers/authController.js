@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const authConfig = require('../config/auth.json');
 
 const User = require('../models/User');
 
@@ -17,8 +18,6 @@ router.post('/register', async (req, res) => {
         const user = await User.create(req.body);
 
         user.password = undefined;
-
-        const token = jwt.sign({ id: user.id }, );
 
         return res.send({ user });
     } catch (err) {
@@ -42,8 +41,11 @@ router.post('/authenticate', async (req, res) => {
     user.password = undefined;
 
     try {
+        const token = jwt.sign({ id: user.id }, authConfig.secret, {
+            expiresIn: 86400,
+        });
 
-        res.send({ user });
+        res.send({ user, token });
 
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed', msg: err.message });
