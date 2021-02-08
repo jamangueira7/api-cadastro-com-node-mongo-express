@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
+const mailer = require('../../modules/mailer');
 
 const authConfig = require('../../config/auth.json');
 
@@ -77,6 +78,20 @@ router.post('/forgot_password', async (req, res) => {
 
         const now = new Date();
         now.setHours((now.getHours() + 1));
+
+        await User.findByIdAndUpdate(user.id, {
+                '$set': {
+                    passwordResetToken: token,
+                    passwordResetExpires: now,
+                }
+            }, { new: true, useFindAndModify: false }
+        );
+
+        mailer.sendEmail({
+           to: email,
+           from: 'app@teste.com.br',
+           template:  ''
+        });
 
 
     } catch (err) {
