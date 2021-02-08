@@ -117,6 +117,17 @@ Retorno
 }
 ```
 
+- **`POST auth/reset_password`**: Rota para para mudar senha;
+Envio
+```
+{
+    "email": "jamjs7@gmail.com",
+    "token": "7bc2403e52028b54fec0aa88357b708646549ce2",
+    "password": "654321"
+}
+
+```
+
 - **`POST auth/projects`**: Rota para usuarios autenticados verem os projetos;
 
 ```
