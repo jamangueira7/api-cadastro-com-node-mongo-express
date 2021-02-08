@@ -41,6 +41,7 @@ Esse projeto foi feito acompanhando a video aula do Youtube:
  
 - Aula 1[clique aqui](https://www.youtube.com/watch?v=BN_8bCfVp88).
 - Aula 2[clique aqui](https://www.youtube.com/watch?v=KKTX1l3sZGk).
+- Aula 3[clique aqui](https://www.youtube.com/watch?v=Zwdv9RllPqU).
 
 ## 🚀 Como Rodar
 
