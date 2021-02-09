@@ -12,9 +12,9 @@ router.get('/', async (req, res) => {
     try {
         const projects = await Project.find().populate('user');
 
-        res.send({ projects });
+        return res.send({ projects });
     } catch (err) {
-        res.status(400).send({ error: 'Error loading projects' });
+        return res.status(400).send({ error: 'Error loading projects' });
     }
 });
 
@@ -22,9 +22,9 @@ router.get('/:projectId', async (req, res) => {
     try {
         const project = await Project.findById(req.params.projectId).populate('user');
 
-        res.send(project);
+        return res.send(project);
     } catch (err) {
-        res.status(400).send({ error: 'Error loading project' });
+        return res.status(400).send({ error: 'Error loading project' });
     }
 });
 
@@ -32,9 +32,9 @@ router.post('/', async (req, res) => {
     try {
         const project = await Project.create({ ...req.body, user: req.userId });
 
-        res.send({ project });
+        return res.send({ project });
     } catch (err) {
-        res.status(400).send({ error: 'Error creating new project', err });
+        return res.status(400).send({ error: 'Error creating new project', err });
     }
 });
 
@@ -43,7 +43,13 @@ router.put('/:projectId', async (req, res) => {
 });
 
 router.delete('/:projectId', async (req, res) => {
-    res.send({ ok: true });
+    try {
+        await Project.findByIdAndRemove(req.params.projectId);
+
+        return res.send();
+    } catch (err) {
+        return res.status(400).send({ error: 'Error deleting project' });
+    }
 });
 
 module.exports = app => app.use('/projects', router);
