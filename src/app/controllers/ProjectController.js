@@ -17,7 +17,13 @@ router.get('/:projectId', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    res.send({ ok: true });
+    try {
+        const project = await Project.create(req.body);
+
+        res.send({ project });
+    } catch (err) {
+        res.status(400).send({ error: 'Error creating new project' });
+    }
 });
 
 router.put('/:projectId', async (req, res) => {
