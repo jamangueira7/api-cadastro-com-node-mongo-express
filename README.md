@@ -127,8 +127,32 @@ Envio
 }
 
 ```
+- **`GET auth/projects`**: Rota para usuarios autenticados verem os projetos;
+Retorno
+```
+{
+    "projects": [
+        {
+            "tasks": [],
+            "_id": "60228e667396f122946439d4",
+            "title": "Novo projeto",
+            "description": "Descrição do novo projeto",
+            "createdAt": "2021-02-09T13:30:14.165Z",
+            "__v": 0
+        },
+        {
+            "tasks": [],
+            "_id": "60228f15c6e1e445a8c65c56",
+            "title": "Novo projeto 2",
+            "description": "Descrição do novo projeto 2",
+            "createdAt": "2021-02-09T13:33:09.241Z",
+            "__v": 0
+        }
+    ]
+}
+```
 
-- **`POST auth/projects`**: Rota para usuarios autenticados verem os projetos;
+- **`POST auth/projects`**: Rota para usuarios autenticados criarem projetos;
 Envio
 ```
 {
