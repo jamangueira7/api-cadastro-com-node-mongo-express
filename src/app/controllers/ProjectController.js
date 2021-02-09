@@ -9,7 +9,13 @@ const router = express.Router();
 router.use(authMiddleware);
 
 router.get('/', async (req, res) => {
-    res.send({ ok: true });
+    try {
+        const projects = await Project.find();
+
+        res.send({ projects });
+    } catch (err) {
+        res.status(400).send({ error: 'Error loading project' });
+    }
 });
 
 router.get('/:projectId', async (req, res) => {
