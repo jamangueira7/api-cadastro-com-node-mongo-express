@@ -130,7 +130,6 @@ Envio
 
 - **`POST auth/projects`**: Rota para usuarios autenticados verem os projetos;
 
-```
 Retorno
 ```
 {
