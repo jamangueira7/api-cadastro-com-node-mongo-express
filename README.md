@@ -134,20 +134,17 @@ Retorno
     "projects": [
         {
             "tasks": [],
-            "_id": "60228e667396f122946439d4",
-            "title": "Novo projeto",
-            "description": "Descrição do novo projeto",
-            "user": "6021c427e6d27b282cad985c",
-            "createdAt": "2021-02-09T13:30:14.165Z",
-            "__v": 0
-        },
-        {
-            "tasks": [],
-            "_id": "60228f15c6e1e445a8c65c56",
-            "title": "Novo projeto 2",
-            "description": "Descrição do novo projeto 2",
-            "user": "6021c427e6d27b282cad985c",
-            "createdAt": "2021-02-09T13:33:09.241Z",
+            "_id": "602292c0630f3d4aec44526b",
+            "title": "Novo projeto 5",
+            "description": "Descrição do novo projeto 5",
+            "user": {
+                "_id": "6021c427e6d27b282cad985c",
+                "name": "João",
+                "email": "jamjs7@gmail.com",
+                "createdAt": "2021-02-08T23:07:19.427Z",
+                "__v": 0
+            },
+            "createdAt": "2021-02-09T13:48:48.862Z",
             "__v": 0
         }
     ]
