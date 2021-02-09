@@ -151,6 +151,26 @@ Retorno
 }
 ```
 
+- **`GET auth/projects/:projetecId`**: Rota para usuarios autenticados verem detalhe do projeto;
+Retorno
+```
+{
+    "tasks": [],
+    "_id": "602292c0630f3d4aec44526b",
+    "title": "Novo projeto 5",
+    "description": "Descrição do novo projeto 5",
+    "user": {
+        "_id": "6021c427e6d27b282cad985c",
+        "name": "João",
+        "email": "jamjs7@gmail.com",
+        "createdAt": "2021-02-08T23:07:19.427Z",
+        "__v": 0
+    },
+    "createdAt": "2021-02-09T13:48:48.862Z",
+    "__v": 0
+}
+```
+
 - **`POST auth/projects`**: Rota para usuarios autenticados criarem projetos;
 Envio
 ```
