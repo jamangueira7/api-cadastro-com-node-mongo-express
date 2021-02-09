@@ -24,11 +24,11 @@ router.get('/:projectId', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const project = await Project.create(req.body);
+        const project = await Project.create({ ...req.body, user: req.userId });
 
         res.send({ project });
     } catch (err) {
-        res.status(400).send({ error: 'Error creating new project' });
+        res.status(400).send({ error: 'Error creating new project', err });
     }
 });
 
