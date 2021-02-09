@@ -10,16 +10,22 @@ router.use(authMiddleware);
 
 router.get('/', async (req, res) => {
     try {
-        const projects = await Project.find().populate('user');
+        const project = await Project.find().populate('user');
+
+        res.send({ project });
+    } catch (err) {
+        res.status(400).send({ error: 'Error loading projects' });
+    }
+});
+
+router.get('/:projectId', async (req, res) => {
+    try {
+        const projects = await Project.findById(req.params.projectId).populate('user');
 
         res.send({ projects });
     } catch (err) {
         res.status(400).send({ error: 'Error loading project' });
     }
-});
-
-router.get('/:projectId', async (req, res) => {
-    res.send({ ok: true });
 });
 
 router.post('/', async (req, res) => {
