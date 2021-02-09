@@ -177,8 +177,18 @@ Retorno
 Envio
 ```
 {
-    "title": "Novo projeto",
-    "description": "Descrição do novo projeto"
+    "title": "Novo projeto 6",
+    "description": "Descrição do novo projeto 6",
+    "tasks":[
+        {
+            "title": "Novo tarefa 1",
+            "assignedTo": "602292c0630f3d4aec44526b"
+        },
+        {
+            "title": "Novo tarefa 2",
+            "assignedTo": "602292c0630f3d4aec44526b"
+        }
+    ]
 }
 ```
 
@@ -186,13 +196,32 @@ Retorno
 ```
 {
     "project": {
-        "tasks": [],
-        "_id": "60228e667396f122946439d4",
-        "title": "Novo projeto",
+        "tasks": [
+            {
+                "completed": false,
+                "_id": "60229802b6776f3a00c9fcfc",
+                "title": "Novo tarefa 1",
+                "assignedTo": "602292c0630f3d4aec44526b",
+                "project": "60229802b6776f3a00c9fcfb",
+                "createdAt": "2021-02-09T14:11:14.857Z",
+                "__v": 0
+            },
+            {
+                "completed": false,
+                "_id": "60229802b6776f3a00c9fcfd",
+                "title": "Novo tarefa 2",
+                "assignedTo": "602292c0630f3d4aec44526b",
+                "project": "60229802b6776f3a00c9fcfb",
+                "createdAt": "2021-02-09T14:11:14.857Z",
+                "__v": 0
+            }
+        ],
+        "_id": "60229802b6776f3a00c9fcfb",
+        "title": "Novo projeto 6",
+        "description": "Descrição do novo projeto 6",
         "user": "6021c427e6d27b282cad985c",
-        "description": "Descrição do novo projeto",
-        "createdAt": "2021-02-09T13:30:14.165Z",
-        "__v": 0
+        "createdAt": "2021-02-09T14:11:14.848Z",
+        "__v": 1
     }
 }
 ```
