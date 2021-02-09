@@ -264,6 +264,72 @@ Retorno
 }
 ```
 
+- **`PUT auth/projects`**: Rota para usuarios autenticados alterarem projetos;
+Envio
+```
+{
+    "title": "Novo projeto 6",
+    "description": "Descrição do novo projeto 6",
+    "tasks":[
+        {
+            "title": "Novo tarefa 1",
+            "assignedTo": "602292c0630f3d4aec44526b"
+        },
+        {
+            "title": "Novo tarefa 2",
+            "assignedTo": "602292c0630f3d4aec44526b"
+        },
+        {
+            "title": "Novo tarefa 3",
+            "assignedTo": "602292c0630f3d4aec44526b"
+        }
+    ]
+}
+```
+
+Retorno
+```
+{
+    "project": {
+        "tasks": [
+            {
+                "completed": false,
+                "_id": "60229a68c6444d4e2c73c17f",
+                "title": "Novo tarefa 1",
+                "assignedTo": "602292c0630f3d4aec44526b",
+                "project": "60229802b6776f3a00c9fcfb",
+                "createdAt": "2021-02-09T14:21:28.514Z",
+                "__v": 0
+            },
+            {
+                "completed": false,
+                "_id": "60229a68c6444d4e2c73c180",
+                "title": "Novo tarefa 2",
+                "assignedTo": "602292c0630f3d4aec44526b",
+                "project": "60229802b6776f3a00c9fcfb",
+                "createdAt": "2021-02-09T14:21:28.515Z",
+                "__v": 0
+            },
+            {
+                "completed": false,
+                "_id": "60229a68c6444d4e2c73c181",
+                "title": "Novo tarefa 3",
+                "assignedTo": "602292c0630f3d4aec44526b",
+                "project": "60229802b6776f3a00c9fcfb",
+                "createdAt": "2021-02-09T14:21:28.515Z",
+                "__v": 0
+            }
+        ],
+        "_id": "60229802b6776f3a00c9fcfb",
+        "title": "Novo projeto 6",
+        "description": "Descrição do novo projeto 6",
+        "user": "6021c427e6d27b282cad985c",
+        "createdAt": "2021-02-09T14:11:14.848Z",
+        "__v": 2
+    }
+}
+```
+
 ## 🤔 Como contribuir
 
 - Faça um fork desse repositório;
