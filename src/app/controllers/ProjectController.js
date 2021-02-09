@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:projectId', async (req, res) => {
     try {
-        const project = await Project.findById(req.params.projectId).populate('user');
+        const project = await Project.findById(req.params.projectId).populate(['user', 'tasks']);
 
         return res.send(project);
     } catch (err) {
