@@ -171,6 +171,8 @@ Retorno
 }
 ```
 
+- **`DELETE auth/projects/:projetecId`**: Rota para usuarios autenticados excluírem projeto;
+
 - **`POST auth/projects`**: Rota para usuarios autenticados criarem projetos;
 Envio
 ```
