@@ -129,7 +129,27 @@ Envio
 ```
 
 - **`POST auth/projects`**: Rota para usuarios autenticados verem os projetos;
+Envio
+```
+{
+    "title": "Novo projeto",
+    "description": "Descrição do novo projeto"
+}
+```
 
+Retorno
+```
+{
+    "project": {
+        "tasks": [],
+        "_id": "60228e667396f122946439d4",
+        "title": "Novo projeto",
+        "description": "Descrição do novo projeto",
+        "createdAt": "2021-02-09T13:30:14.165Z",
+        "__v": 0
+    }
+}
+```
 
 ## 🤔 Como contribuir
 
