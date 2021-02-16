@@ -127,7 +127,7 @@ Envio
 }
 
 ```
-- **`GET auth/projects`**: Rota para usuarios autenticados verem os projetos;
+- **`GET projects`**: Rota para usuarios autenticados verem os projetos;
 Retorno
 ```
 {
@@ -170,7 +170,7 @@ Retorno
 }
 ```
 
-- **`GET auth/projects/:projetecId`**: Rota para usuarios autenticados verem detalhe do projeto;
+- **`GET projects/:projetecId`**: Rota para usuarios autenticados verem detalhe do projeto;
 Retorno
 ```
 {
@@ -209,9 +209,9 @@ Retorno
 }
 ```
 
-- **`DELETE auth/projects/:projetecId`**: Rota para usuarios autenticados excluírem projeto;
+- **`DELETE projects/:projetecId`**: Rota para usuarios autenticados excluírem projeto;
 
-- **`POST auth/projects`**: Rota para usuarios autenticados criarem projetos;
+- **`POST projects`**: Rota para usuarios autenticados criarem projetos;
 Envio
 ```
 {
@@ -264,7 +264,7 @@ Retorno
 }
 ```
 
-- **`PUT auth/projects`**: Rota para usuarios autenticados alterarem projetos;
+- **`PUT projects`**: Rota para usuarios autenticados alterarem projetos;
 Envio
 ```
 {
