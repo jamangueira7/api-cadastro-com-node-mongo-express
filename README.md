@@ -39,19 +39,19 @@ Projeto para cadastro de usuario usando NodeJS, Express, MongoDB e Docker.
 
 Esse projeto foi feito acompanhando a video aula do Youtube:
  
-- Aula 1[clique aqui](https://www.youtube.com/watch?v=BN_8bCfVp88).
-- Aula 2[clique aqui](https://www.youtube.com/watch?v=KKTX1l3sZGk).
-- Aula 3[clique aqui](https://www.youtube.com/watch?v=Zwdv9RllPqU).
+- Aula 1 [clique aqui](https://www.youtube.com/watch?v=BN_8bCfVp88).
+- Aula 2 [clique aqui](https://www.youtube.com/watch?v=KKTX1l3sZGk).
+- Aula 3 [clique aqui](https://www.youtube.com/watch?v=Zwdv9RllPqU).
 
 ## 🚀 Como Rodar
 
 - Clone o projeto.
-- Rode o comando "yarn install" para instalar as dependências.
-- Rode o comando "docker run --name mongodb -p 27017:27017 -d -t mongo"
+- Rode o comando `yarn install` para instalar as dependências.
+- Rode o comando `docker run --name mongodb -p 27017:27017 -d -t mongo`
 - docker ps para ver se o Mongo está rodando no Docker.
 - Caso não esteja docker start mongo para rodar.
-- Rode o comando "node src/index.js" para iniciar a API.
-- Para testar a API acesse localhost:3000.
+- Rode o comando `node src/index.js`para iniciar a API.
+- Para testar a API acesse `localhost:3000`.
 
 ## 👩🏿‍💻 Rotas
 
